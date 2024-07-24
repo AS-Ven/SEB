@@ -1,0 +1,53 @@
+[
+    {
+        "name": "",
+        "year": [
+            "",
+            ""
+        ],
+        "studio": "",
+        "editor": "",
+        "genres": "",
+        "watch":[
+        {
+            "name": "",
+            "episod": "",
+            "link": ""
+        }
+        ],
+        "synopsis": "",
+        "avis": "",
+        "img": "",
+        "statu": "",
+        "watchedOn": ""
+    },
+    {
+        "subject": {
+            "id": 999,
+            "value" : "",
+            "pronoun": ""
+        },
+        "verbe": [
+            {"id": 999},
+            {"pronoun": "jeM", "value": ""},
+            {"pronoun": "jeF", "value": ""},
+            {"pronoun": "tuM", "value": ""},
+            {"pronoun": "tuF", "value": ""},
+            {"pronoun": "il", "value": ""},
+            {"pronoun": "elle", "value": ""},
+            {"pronoun": "nousM", "value": ""},
+            {"pronoun": "nousF", "value": ""},
+            {"pronoun": "vousM", "value": ""},
+            {"pronoun": "vousF", "value": ""},
+            {"pronoun": "ils", "value": ""},
+            {"pronoun": "elles", "value": ""}
+        ],
+        "complement": {
+            "id": 999,
+            "value": ""
+        },
+        "bonus": {
+            "gif": ""
+        }
+    }
+]

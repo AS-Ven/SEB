@@ -1,0 +1,17 @@
+{
+  "name": "seb",
+  "version": "1.0.0",
+  "description": "stonos's e-butler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ASV",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "luxon": "^3.4.4"
+  }
+}

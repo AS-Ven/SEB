@@ -1,0 +1,321 @@
+[
+    {
+        "subject": {
+            "id": 0,
+            "value" : "Cet homme",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 0},
+            {"pronoun" :"jeM", "value": "avais amassé"},
+            {"pronoun" :"jeF", "value": "avais amassé"},
+            {"pronoun" :"tuM", "value": "avais amassé"},
+            {"pronoun" :"tuF", "value": "avais amassé"},
+            {"pronoun" :"il", "value": "avait amassé"},
+            {"pronoun" :"elle", "value": "avait amassé"},
+            {"pronoun" :"nousM", "value": "avions amassé"},
+            {"pronoun" :"nousF", "value": "avions amassé"},
+            {"pronoun" :"vousM", "value": "aviez amassé"},
+            {"pronoun" :"vousF", "value": "aviez amassé"},
+            {"pronoun" :"ils", "value": "avaient amassé"},
+            {"pronoun" :"elles", "value": "avaient amassé"}
+        ],
+        "complement": {
+            "id": 0,
+            "value": "toutes les richesses du monde."
+        },
+        "bonus": {
+            "gif": "https://i.pinimg.com/originals/fb/63/ce/fb63ce36de5e16595cd9c73d5634a2b1.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 1,
+            "value" : "La pluie de tes sarcasmes",
+            "pronoun": "elle"
+        },
+        "verbe": [
+            {"id": 1},
+            {"pronoun": "jeM", "value": "glisse sur"},
+            {"pronoun": "jeF", "value": "glisse sur"},
+            {"pronoun": "tuF", "value": "glisses sur"},
+            {"pronoun": "tuM", "value": "glisses sur"},
+            {"pronoun": "il", "value": "glisse sur"},
+            {"pronoun": "elle", "value": "glisse sur"},
+            {"pronoun": "nousM", "value": "glissons sur"},
+            {"pronoun": "nousF", "value": "glissons sur"},
+            {"pronoun": "vousM", "value": "glissez sur"},
+            {"pronoun": "vousF", "value": "glissez sur"},
+            {"pronoun": "ils", "value": "glissent sur"},
+            {"pronoun": "elles", "value": "glissent sur"}
+        ],
+        "complement": {
+            "id": 1,
+            "value": "la toile cirée de mon indifférence."
+        },
+        "bonus": {
+            "gif": "https://collectifpou.fr/wp-content/uploads/2023/02/aebf60c7a0c9c75216c84074231e9cbc763f968a_hq.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 2,
+            "value" : "L' esprit du mal",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 2},
+            {"pronoun": "jeM", "value": "suis marqué sur"},
+            {"pronoun": "jeF", "value": "suis marquée sur"},
+            {"pronoun": "tuM", "value": "es marqué sur"},
+            {"pronoun": "tuF", "value": "es marquée sur"},
+            {"pronoun": "il", "value": "est marqué sur"},
+            {"pronoun": "elle", "value": "est marquée sur"},
+            {"pronoun": "nousM", "value": "sommes marqués sur"},
+            {"pronoun": "nousF", "value": "sommes marquées sur"},
+            {"pronoun": "vousM", "value": "êtes marqués sur"},
+            {"pronoun": "vousF", "value": "êtes marquées sur"},
+            {"pronoun": "ils", "value": "sont marqués sur"},
+            {"pronoun": "elles", "value": "sont marquées sur"}
+        ],
+        "complement": {
+            "id": 2,
+            "value": "sa face."
+        },
+        "bonus": {
+            "gif": "https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/34/1472039769-lion-king-rafiki-throws-simba.gif?crop=1xw:0.9648370497427101xh;center,top&resize=1200:*"
+        }
+    },
+    {
+        "subject": {
+            "id": 3,
+            "value" : "La vie",
+            "pronoun": "elle"
+        },
+        "verbe": [
+            {"id": 3},
+            {"pronoun": "jeM", "value": "protège"},
+            {"pronoun": "jeF", "value": "protège"},
+            {"pronoun": "tuM", "value": "protèges"},
+            {"pronoun": "tuF", "value": "protèges"},
+            {"pronoun": "il", "value": "protège"},
+            {"pronoun": "elle", "value": "protège"},
+            {"pronoun": "nousM", "value": "protègeons"},
+            {"pronoun": "nousF", "value": "protègeons"},
+            {"pronoun": "vousM", "value": "protègez"},
+            {"pronoun": "vousF", "value": "protègez"},
+            {"pronoun": "ils", "value": "protègent"},
+            {"pronoun": "elles", "value": "protègent"}
+        ],
+        "complement": {
+            "id": 3,
+            "value": "la vie."
+        },
+        "bonus": {
+            "gif": "https://i.redd.it/mkyo46ghp11b1.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 4,
+            "value" : "Une vague se heurtant violemment",
+            "pronoun": "elle"
+        },
+        "verbe": [
+            {"id": 4},
+            {"pronoun": "jeM", "value": "glisse sur"},
+            {"pronoun": "jeF", "value": "glisse sur"},
+            {"pronoun": "tuM", "value": "glisses sur"},
+            {"pronoun": "tuF", "value": "glisses sur"},
+            {"pronoun": "il", "value": "glisse sur"},
+            {"pronoun": "elle", "value": "glisse sur"},
+            {"pronoun": "nousM", "value": "glissons sur"},
+            {"pronoun": "nousF", "value": "glissons sur"},
+            {"pronoun": "vousM", "value": "glissez sur"},
+            {"pronoun": "vousF", "value": "glissez sur"},
+            {"pronoun": "ils", "value": "glissent sur"},
+            {"pronoun": "elles", "value": "glissent sur"}
+        ],
+        "complement": {
+            "id": 4,
+            "value": "une peau de banane."
+        },
+        "bonus": {
+            "gif": "https://i.makeagif.com/media/9-23-2019/dcS8Zq.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 5,
+            "value" : "Qui vole un oeuf,",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 5},
+            {"pronoun": "jeM", "value": "vole"},
+            {"pronoun": "jeF", "value": "vole"},
+            {"pronoun": "tuM", "value": "voles"},
+            {"pronoun": "tuF", "value": "voles"},
+            {"pronoun": "il", "value": "vole"},
+            {"pronoun": "elle", "value": "vole"},
+            {"pronoun": "nousM", "value": "volons"},
+            {"pronoun": "nousF", "value": "volons"},
+            {"pronoun": "vousM", "value": "volez"},
+            {"pronoun": "vousF", "value": "volez"},
+            {"pronoun": "ils", "value": "volent"},
+            {"pronoun": "elles", "value": "volent"}
+        ],
+        "complement": {
+            "id": 5,
+            "value": "un boeuf."
+        },
+        "bonus": {
+            "gif": "https://media1.tenor.com/m/_gfqfXAP08IAAAAC/polish-cow-cow.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 6,
+            "value" : "Avant son papa il",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 6},
+            {"pronoun": "jeM", "value": "étais"},
+            {"pronoun": "jeF", "value": "étais"},
+            {"pronoun": "tuM", "value": "étais"},
+            {"pronoun": "tuF", "value": "étais"},
+            {"pronoun": "il", "value": "était"},
+            {"pronoun": "elle", "value": "était"},
+            {"pronoun": "nousM", "value": "étions"},
+            {"pronoun": "nousF", "value": "étions"},
+            {"pronoun": "vousM", "value": "étiez"},
+            {"pronoun": "vousF", "value": "étiez"},
+            {"pronoun": "ils", "value": "étaient"},
+            {"pronoun": "elles", "value": "étaient"}
+        ],
+        "complement": {
+            "id": 6,
+            "value": "un marin."
+        },
+        "bonus": {
+            "gif": "https://cdn.dribbble.com/users/1799092/screenshots/3619263/drib_01.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 7,
+            "value" : "L'important",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 7},
+            {"pronoun": "jeM", "value": "suis"},
+            {"pronoun": "jeF", "value": "suis"},
+            {"pronoun": "tuM", "value": "es"},
+            {"pronoun": "tuF", "value": "es"},
+            {"pronoun": "il", "value": "c'est"},
+            {"pronoun": "elle", "value": "c'est"},
+            {"pronoun": "nousM", "value": "sommes"},
+            {"pronoun": "nousF", "value": "sommes"},
+            {"pronoun": "vousM", "value": "êtes"},
+            {"pronoun": "vousF", "value": "êtes"},
+            {"pronoun": "ils", "value": "sont"},
+            {"pronoun": "elles", "value": "sont"}
+        ],
+        "complement": {
+            "id": 7,
+            "value": "l'essentiel."
+        },
+        "bonus": {
+            "gif": "https://upload-os-bbs.hoyolab.com/upload/2023/08/18/246295471/7a62580e3153e95feafe23305354cc91_4882643318087573335.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 8,
+            "value" : "Il",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 8},
+            {"pronoun": "jeM", "value": "cherche"},
+            {"pronoun": "jeF", "value": "cherche"},
+            {"pronoun": "tuM", "value": "cherches"},
+            {"pronoun": "tuF", "value": "cherches"},
+            {"pronoun": "il", "value": "cherche"},
+            {"pronoun": "elle", "value": "cherche"},
+            {"pronoun": "nousM", "value": "cherchons"},
+            {"pronoun": "nousF", "value": "cherchons"},
+            {"pronoun": "vousM", "value": "cherchez"},
+            {"pronoun": "vousF", "value": "cherchez"},
+            {"pronoun": "ils", "value": "cherchent"},
+            {"pronoun": "elles", "value": "cherchent"}
+        ],
+        "complement": {
+            "id": 8,
+            "value": "midi à 14h."
+        },
+        "bonus": {
+            "gif": "https://media3.giphy.com/media/h2kyQ5GEOjm9xn6xb1/giphy.gif?cid=6c09b952676jp58tu8oy9g8t7ilv5pw26e6j9sxf0ehdzqn5&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"
+        }
+    },
+    {
+        "subject": {
+            "id": 9,
+            "value" : "Les coccinelles",
+            "pronoun": "elles"
+        },
+        "verbe": [
+            {"id": 9},
+            {"pronoun": "jeM", "value": "suis"},
+            {"pronoun": "jeF", "value": "suis"},
+            {"pronoun": "tuM", "value": "es"},
+            {"pronoun": "tuF", "value": "es"},
+            {"pronoun": "il", "value": "est"},
+            {"pronoun": "elle", "value": "est"},
+            {"pronoun": "nousM", "value": "sommes"},
+            {"pronoun": "nousF", "value": "sommes"},
+            {"pronoun": "vousM", "value": "êtes"},
+            {"pronoun": "vousF", "value": "êtes"},
+            {"pronoun": "ils", "value": "sont"},
+            {"pronoun": "elles", "value": "sont"}
+        ],
+        "complement": {
+            "id": 9,
+            "value": "des coléoptères."
+        },
+        "bonus": {
+            "gif": "https://64.media.tumblr.com/5eb7ad049faab4d04504fcb5ec7bf3a6/6a85f2ca9c877e7c-c5/s540x810/9069c10b0a864b73dee2fed6d01df3002f341090.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 10,
+            "value" : "Le René",
+            "pronoun": "il"
+        },
+        "verbe": [
+            {"id": 10},
+            {"pronoun": "jeM", "value": "vais mettre"},
+            {"pronoun": "jeF", "value": "vais mettre"},
+            {"pronoun": "tuM", "value": "vas mettre"},
+            {"pronoun": "tuF", "value": "vas mettre"},
+            {"pronoun": "il", "value": "va mettre"},
+            {"pronoun": "elle", "value": "va mettre"},
+            {"pronoun": "nousM", "value": "allons mettre"},
+            {"pronoun": "nousF", "value": "allons mettre"},
+            {"pronoun": "vousM", "value": "allez mettre"},
+            {"pronoun": "vousF", "value": "allez mettre"},
+            {"pronoun": "ils", "value": "vont mettre"},
+            {"pronoun": "elles", "value": "vont mettre"}
+        ],
+        "complement": {
+            "id": 10,
+            "value": "une pété à la Monique."
+        },
+        "bonus": {
+            "gif": "https://media1.tenor.com/m/VKgziZNfjOQAAAAC/c%27est-la-pet%C3%A9e-groland.gif"
+        }
+    }
+]
