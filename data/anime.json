@@ -8,8 +8,8 @@
         "studio": "Bones",
         "genres": [
             "Action",
-            "Comedy",
-            "Supernatural"
+            "Comédie",
+            "Surnaturel"
         ],
         "watch":[
         {
@@ -37,7 +37,7 @@
         ],
         "studio": "A-1 Pictures",
         "genres": [
-            "Drama",
+            "Drame",
             "Romance",
             "Slice of life"
         ],
@@ -63,8 +63,8 @@
         "studio": "Bones",
         "genres": [
             "Action",
-            "Comedy",
-            "Drama",
+            "Comédie",
+            "Drame",
             "Fantasy",
             "Thriller"
         ],
@@ -90,7 +90,7 @@
         "studio": "MAPPA",
         "genres": [
             "Action",
-            "Comedy",
+            "Comédie",
             "Fantasy"
         ],
         "watch":[
@@ -115,7 +115,7 @@
         "editor": "Nobi Nobi!",
         "genres": [
             "Action",
-            "Adventure",
+            "Aventure",
             "Fantasy"
         ],
         "tome": "4 volumes",
@@ -134,7 +134,7 @@
         "studio": "A-1 Pictures",
         "genres": [
             "Romance",
-            "Comedy",
+            "Comédie",
             "Slice of life"
         ],
         "watch":[
@@ -169,8 +169,8 @@
         "studio": "MAPPA",
         "genres": [
             "Action",
-            "Drama",
-            "Adventure",
+            "Drame",
+            "Aventure",
             "Fantasy"
         ],
         "watch":[
@@ -195,7 +195,7 @@
         "studio": "Studio Colorido, Team Yamahitsuji",
         "genres": [
             "Action",
-            "Comedy",
+            "Comédie",
             "Fantasy"
         ],
         "watch":[
@@ -220,7 +220,7 @@
         "studio": "Brains Base",
         "genres": [
             "Romance",
-            "Comedy",
+            "Comédie",
             "Slice of life"
         ],
         "watch":[
@@ -245,9 +245,9 @@
         "studio": "Bones",
         "genres": [
             "Action",
-            "Comedy",
+            "Comédie",
             "Fantasy",
-            "Mystery"
+            "Mystère"
         ],
         "watch":[
         {
@@ -270,7 +270,7 @@
         ],
         "studio": "P.A. Works",
         "genres": [
-            "Comedy",
+            "Comédie",
             "Slice of life"
         ],
         "watch":[
@@ -294,9 +294,9 @@
         ],
         "studio": "CloverWorks",
         "genres": [
-            "Mystery",
+            "Mystère",
             "Thriller",
-            "Comedy"
+            "Comédie"
         ],
         "watch":[
         {
@@ -308,6 +308,329 @@
         "synopsis": "Haru Kato, un policier affecté à un poste calme pour une faute professionnelle passé va devoir enquête sur une nouvelle affaire avec le multimilliardaire Daisuke Kanbe devenu policier. Pourquoi une personne aussi riche que Daisuke est devenu policier dans un service où il ne se passe pas grand chose ? C'est ce que Haru va tenter de découvrir pendant que son nouveau partenaire avance dans leur enquête à grand coup de liasses de billets.",
         "avis": "Dès le début on veut absolument savoir pourquoi Daisuke est policier, dans une unité calme. Les deux partenaires ont une vision du métier diametralément différente et incompatible, pourtant, ils vont bien devoir s'adapter pour pouvoir avancer.\n> Une fois qu'on a fini de se poser des questions sur Daisuke et qu'on a réelement compris sa fortune, on se concentre sur l'enquête principal qui nous laisse de marbre.",
         "img": "https://mrwallpaper.com/images/hd/the-millionaire-detective-fugou-keiji-balance-unlimited-prn7l8287rgsqpyi.jpg",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Hunter x Hunter",
+        "year": [
+            "2011",
+            "2014"
+        ],
+        "studio": "Madouse",
+        "genres": [
+            "Action",
+            "Aventure",
+            "Comédie",
+            "Fantasy"
+        ],
+        "watch":[
+        {
+            "name": "Saison unique",
+            "episod": "148 épisodes",
+            "link": "https://v5.voiranime.com/anime/hunter-x-hunter-2011/"
+        }
+        ],
+        "synopsis": "Gon Freeccs a presque douze ans, et son rêve est de devenir hunter pour retrouver son père. Cependant l'examen de hunter, qui a lieu chaque année, est extrêmement difficile et périlleux. On dit qu'un candidat sur 10 000 arrive sur le lieu des épreuves et qu'un seul candidat tous les 3 ans devient hunter à sa 1ère tentative. Durant les épreuves, il n'est pas rare d'être blessé, voire tué par des monstres, des pièges ou même d'autres concurrents…",
+        "avis": "HxH est un véritable pilier et non sans raison. Les personnages sont tous très bien écrit et les arcs sont tous plus captivants les uns que les autres.\n> Bien que le personnage principal n'ait que 12ans, les enjeux et les critiques (notamment à l'arc des Fourmis-Chimères) sont riches et complexes.\n> \n> HxH est un excellent animé si vous n'avez pas l'habitude d'en regarder qui vous donnera une très bonne images des animés.",
+        "img": "https://canvas.tubitv.com/opts/pghz8U7ghFzbng==/62d508d7-5b39-4cca-9efa-490f98e18662/CIAPELgIOgUxLjEuMg==",
+        "statu": "Unfinished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Odd Taxi",
+        "year": [
+            "2021",
+            "2021"
+        ],
+        "studio": "OLM, P.I.C.S.",
+        "genres": [
+            "Mystère",
+            "Thriller"
+        ],
+        "watch":[
+        {
+            "name": "Saison unique",
+            "episod": "13 épisodes",
+            "link": "https://v5.voiranime.com/anime/odd-taxi/"
+        }
+        ],
+        "synopsis": "Le chauffeur de taxi Odokawa mène une vie très ordinaire. Il n'a pas de famille, traîne rarement avec les autres et c'est un excentrique borné qui ne parle pas beaucoup. Les seules personnes qu'il peut appeler ses amis se résument à son médecin et à un camarade de classe du lycée. Tous ses clients semblent être eux-mêmes un peu bizarres et lui livrent parfois leurs petits secrets. Toutes ces conversations, à priori banales, finissent par l'impliquer malgré lui dans la disparition tragique d'une jeune fille...",
+        "avis": "Au début, ça à l'air d'un simple slice of life un peu loufoque, on pose son cerveau et on regarde ça tranquillement. Après quelques épisodes, on se rend compte qu'il faut rebrancher le cerveau, l'histoire gagne progressivement en profondeur et notre curiosité est de plus en plus mise à l'épreuve jusqu'au dernier épisode.\n> Il existe un film qui est une sorte de documentaire où chaque personnagent racontent sa version de l'histoire.",
+        "img": "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/144d9ff360e87f7bcc91e1984ed0b3f3.jpe",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Violet Evergarden",
+        "year": [
+            "2018",
+            "2020"
+        ],
+        "studio": "Kyoto Animation",
+        "genres": [
+            "Romance",
+            "Drame",
+            "Slice of life"
+        ],
+        "watch":[
+        {
+            "name": "Saison 1",
+            "episod": "13 épisodes",
+            "link": "https://v5.voiranime.com/anime/violet-evergarden/"
+        },
+        {
+            "name": "Film 1",
+            "episod": "Éternité et la Poupée de Souvenir Automatique",
+            "link": "https://v5.voiranime.com/anime/violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou/"
+        },
+        {
+            "name": "Film 2",
+            "episod": "Violet Evergarden : Le Film",
+            "link": "https://v5.voiranime.com/anime/violet-evergarden-movie/"
+        }
+        ],
+        "synopsis": "Élever par l'armée dans le seul but de tuer, les émotions sont quelques choses que Violet est incapable de comprendre. Celle qui n'a connue que la guerre doit maintenant se faire une place dans la société qui en a subi les conséquences.\n> Afin de comprendre ce que sont les sentiments, Violet va devenir ''Poupée de Souvenir Automatique'', une femme qui aide les personnes à rédiger des lettres riches en émotions.\n> Être directement confronter aux émotions fortes de ses clients pourrait bien être la clef lui permettant de comprendre ce que l'armée lui a toujours interdit.",
+        "avis": "Les émotions ressenties dans cet animé sont si forte qu'il est aujourd'hui mon 2e animé préféré. À ce jour, Violet Evergarden est le seul animé ayant réussi à me faire pleurer.\n> On suit l'époustouflant développement de Violet au travers des séquelles de la guerre et du quotidien des gens. Étant dépourvu d'émotion, Violet ne va pas nous émouvoir directement, en revanche, les personnages secondaires ont tous une lourde histoire, lié ou non à la guerre, qui nous déchire le coeur. Le tout étant accentué par le fait que Violet a beaucoup de mal à les comprendre, on assiste donc à leur tragique histoire en plus de leur détresse de ne pas pouvoir exprimer leurs émotions et être compris.",
+        "img": "https://japoncinema.com/wp-content/uploads/2021/05/v-evergarden.jpeg",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Call of the Night",
+        "year": [
+            "2022",
+            "2022"
+        ],
+        "studio": "Liden Films",
+        "genres": [
+            "Romance",
+            "Slice of life",
+            "Fantasy",
+            "Comédie"
+        ],
+        "watch":[
+        {
+            "name": "Saison 1",
+            "episod": "13 épisodes",
+            "link": "https://v5.voiranime.com/anime/yofukashi-no-uta/"
+        }
+        ],
+        "synopsis": "Ne parvenant pas à s'épanouir dans sa vie de collégien, Ko Yamori arrête d'aller à l'école et commence à errer dans les rues la nuit. Il fait la rencontre de Nazuna Nanakusa, une vampire qui fait découvrir à Ko les joies de vivre la nuit. Ko souhaite alors devenir un vampire, mais pour atteindre son objectif, il devra tomber amoureux de Nazuna.",
+        "avis": "Un animé très drôle et attachant que l'on arrête parfois simplement pour admirer la beauté de la ville nocturne. On prend plaisir à découvrir le quotidien de la nuit avant de découvrir les tristes enjeux auxquels font face les vampires.",
+        "img": "https://fr.web.img2.acsta.net/pictures/22/07/08/08/47/0696548.jpg",
+        "statu": "Unfinished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "The ice guy and the cool girl",
+        "year": [
+            "2023",
+            "2023"
+        ],
+        "studio": "Liber, Zero-G",
+        "genres": [
+            "Romance",
+            "Slice of life",
+            "Surnaturel"
+        ],
+        "watch":[
+        {
+            "name": "Saison 1",
+            "episod": "12 épisodes",
+            "link": "https://v5.voiranime.com/anime/koori-zokusei-danshi-to-cool-na-douryou-joshi/"
+        }
+        ],
+        "synopsis": "Himuro, le descendant d'une [yuki-onna](<https://fr.wikipedia.org/wiki/Yuki-onna>), a hérité de quelques pouvoirs glacés innofensifs qu'il contrôle aussi bien que ces émotions. Amoureux de sa collègue Fuyustuski, une tempête de neige d'émotions se forme dans son cœur dès qu'il pense trop à elle, même s'il ne remarque pas que cette tempête se forme aussi autour de lui.",
+        "avis": "Himuro n'est pas le seul à avoir hérité des pouvoirs de ses ancêtres. L'entreprise où il travail mélange humains et descendants, ce qui nous permet d'observer d'autres couples mixtes se former. On suit 3 couples diamétralement différents et c'est très plaisant. On pose notre cerveau et on profite de leurs quotidien extraordinaire et pourtant si ordinaire.",
+        "img": "https://www.animenewsnetwork.com/hotlink/thumbnails/crop1200x630gGI/cms/news.5/191623/kv-13.jpg",
+        "statu": "Unfinished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Parasyte -The Maxim-",
+        "year": [
+            "2014",
+            "2015"
+        ],
+        "studio": "Madhouse",
+        "genres": [
+            "Horreur",
+            "Action",
+            "Drame",
+            "Psychologique",
+            "Fantasy"
+        ],
+        "watch":[
+        {
+            "name": "Saison unique",
+            "episod": "24 épisodes",
+            "link": "https://v5.voiranime.com/anime/kiseijuu-sei-no-kakuritsu/"
+        }
+        ],
+        "synopsis": "Depuis des milliers d'années, l'Homme est au sommet de la chaîne alimentaire, jusqu'à ce qu'apparaissent les parasites, de petits vers prennant le contrôle d'être humain. Leur seul but est de survivre et faire prospérer leur espèce, au détrimant de l'espèce humaine.\n> On suit Shinichi, un jeune lycéen qui a survécu à l'attaque de l'un d'entre eux, mais qui doit désormais partager son corps avec Migi, un parasite ayant pris le contrôle de son bras.",
+        "avis": "Le développement de Shinichi est l'un des plus remarquable que l'on peut trouver parmi les animés. Plus on prgresse dans l'histoire, et plus on comprend les parasites. Notre moral est mise à l'épreuve dans cet animé où les monstres sont les plus humains.\n> \n> C'est l'un des meilleurs animés dans sa catégorie selon moi.",
+        "img": "https://wallpapers.com/images/high/bloody-parasyte-poster-crjr9gak7odwvjtp.webp",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Death Parade",
+        "year": [
+            "2015",
+            "2015"
+        ],
+        "studio": "Madhouse",
+        "genres": [
+            "Drame",
+            "Psychologique",
+            "Mystère",
+            "Surnaturel"
+        ],
+        "watch":[
+        {
+            "name": "Saison unique",
+            "episod": "12 épisodes",
+            "link": "https://v5.voiranime.com/anime/death-parade/"
+        }
+        ],
+        "synopsis": "Deux personnes se retrouvent dans un bar sans le moindre souvenir de ce qui a pu leur arrivé avant. N'ayant aucun moyen de repartir, le barman leur indique qu'ils vont devoir miser leur vies dans un jeu de bar afin de comprendre les circonstances de leur présence.\n> Voyons comment nos invités vont s'en sortir sous le regard patient de leur hôte",
+        "avis": "Le synopsis ne nous donne que très peu d'information et tant mieux, car on va pouvoir être subjugué en le regardant. L'animé possède une profondeur insoupsonnée et une façon de voir la mort très interressante.\n> Même si il peut paraître lugubre au début, on se rend rapidement compte que c'est en réalité un animé très vivant. C'est un coup de cœur très sous côté selon moi.",
+        "img": "https://animeblazin.com/wp-content/uploads/2019/09/yeVfBxA9z8Q14DLCjziDD2C2DN3-1.jpg",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Assassination Classroom",
+        "year": [
+            "2015",
+            "2015"
+        ],
+        "studio": "Lerche",
+        "genres": [
+            "Comédie",
+            "S. F.",
+            "Drame"
+        ],
+        "watch":[
+        {
+            "name": "Saison 1",
+            "episod": "22 épisodes",
+            "link": "https://v5.voiranime.com/anime/ansatsu-kyoushitsu/"
+        },
+        {
+            "name": "Saison 2",
+            "episod": "25 épisodes",
+            "link": "https://v5.voiranime.com/anime/ansatsu-kyoushitsu-2/"
+        }
+        ],
+        "synopsis": "Après avoir partiellement détruit la Lune, un être étrange et surpuissant a décrété que si personne ne parvenait à le tuer dans l'année à venir, la planète subirait le même sort que son satellite. Durant ce laps de temps, il a également exigé d'être nommé professeur de la classe 3-E du lycée Kunugigaoka, la classe des cas désespérés. Les étudiants sont donc les mieux placés pour tuer cet étrange professeur. L'ennui, c'est que la majorité des lycéens de cette classe manquent cruellement de confiance en eux, écrasés par un système qui ne leur convient pas.",
+        "avis": "L'histoire paraît tirée par les cheveux mais elle est pourtant aussi triste que bien ficelée.\n> Chaque élève de la classe est développé à son tour pour finir par le professeur lui-même. On se rend compte des injustes raisons qui poussent certains élèves dans l'échec et d'autres dans la réussite contre lesquels les élèves vont se battre tout au long de l'année.\n> \n> C'est un excellent animé si vous n'en regardez pas beaucoup.",
+        "img": "https://images8.alphacoders.com/871/871560.png",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Blue Exorcist",
+        "year": [
+            "2011",
+            "2024"
+        ],
+        "studio": "A-1 Pictures",
+        "genres": [
+            "Action",
+            "Fantasy",
+            "Comédie"
+        ],
+        "watch":[
+        {
+            "name": "Saison 1",
+            "episod": "25 épisodes",
+            "link": "https://v5.voiranime.com/anime/ao-no-exorcist/"
+        },
+        {
+            "name": "Saison 2",
+            "episod": "12 épisodes",
+            "link": "https://v5.voiranime.com/anime/ao-no-exorcist-kyoto-fujouou-hen/"
+        },
+        {
+            "name": "Saison 3",
+            "episod": "12 épisodes",
+            "link": "https://v5.voiranime.com/anime/ao-no-exorcist-3-shimane-illuminati-hen/"
+        }
+        ],
+        "synopsis": "Le monde de Blue Exorcist se compose de deux dimensions qui s'opposent. La première est le monde dans lequel les êtres humains vivent, Assiah. L'autre est le monde des démons, la Géhenne.\n> Les démons, capable de faire le voyage entre ces deux dimensions, s'amusent à troubler les humains. Des exorcistes sont donc entraîner pour repousser les démons et protéger les humains, et quel meilleur exorciste que le fils de Satan lui-même...",
+        "avis": "*la fin de la saison 1 n'est pas canon, c'est normal de s'y perdre lorsqu'on commence la saison 2*.\n> Mis à part ce problème, c'est un bon animé. Même si l'histoire peu paraître peu original, elle est bien développé et nous entraine facilement vers la suite de l'intrigue. On voit chaque groupe de personnages saison par saison ce qui peut nous laisser avec une mauvaise impression pour certains qui sera finira par s'effacer.",
+        "img": "https://www.shoshosein.com/sites/default/files/fiches/animes/blue-exorcist/blue-exorcist-wallpaper-20.jpg",
+        "statu": "Unfinished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Baccano !",
+        "year": [
+            "2007",
+            "2007"
+        ],
+        "studio": "Brain's Base",
+        "genres": [
+            "Action",
+            "Comédie",
+            "Mystère",
+            "Surnaturel"
+        ],
+        "watch":[
+        {
+            "name": "Saison unique",
+            "episod": "13 épisodes",
+            "link": "https://v5.voiranime.com/anime/baccano/"
+        }
+        ],
+        "synopsis": "En 1711, dans un bateau à destination des Etats-Unis, des alchimistes invoquèrent le démon pour obtenir la vie éternelle. Celui-ci leur fit boire un breuvage qui leur assura la jeunesse éternelle. Mais ce terrifiant pouvoir provoqua des conflits entre les alchimistes et ceux-ci se dispersèrent pour échapper à ceux d'entre eux, qui, avides de pouvoir, voudraient les faire disparaître.\n> 1930, Etats-Unis d'Amérique. Les destins des alchimistes restants et celui de plusieurs personnes vont se croiser par un concours de circonstances. Tous vont se retrouver embarqués dans les affaires mêlant conflits entre différents clans de la mafia, le mystérieux élixir, et un couple de voleurs particulièrement excentriques.",
+        "avis": "C'est un excellent animé dont l'approche scénaristique est très différente de ce à quoi on est habitué. De plus, l'animé ne fait clairement pas son âge, surment grâce à l'époque où il se déroule.\n> Il n'y a pas de personnage secondaire dans cet animé, chaque personne que l'on peut voir dans l'opening peut prétendre au titre de personnage principal (même si les vraie ''héros'' sont nos deux voleurs). On change tout le temps de point de vue et parfois même de temporalité, ce qui nous permet de mieux comprendre les différents point de vue des personnages.\n> Un énorme coup de cœur que je recommande vivement.",
+        "img": "https://images4.alphacoders.com/252/252906.png",
+        "statu": "Finished",
+        "watchedOn": "anime"
+    },
+    {
+        "name": "Black Torch",
+        "year": [
+            "2016",
+            "2018"
+        ],
+        "editor": "Ki-oon",
+        "genres": [
+            "Action",
+            "Surnaturel"
+        ],
+        "tome": "5 volumes",
+        "synopsis": "En tant que descendant des shinobi, Jirou Azuma a passé sa vie à apprendre des techniques ninja. Mais en plus il a le don de parler aux animaux.\n> Un jour, il sauve un étrange chat appelé Rago, il lui apprend que le monde est rempli d'esprits qui peuvent prendre la forme d'un humain ou d'un animal : les Mononoke.\n> Cependant, leur rencontre est interrompue quand ils sont attaqués par un Mononoke hostile qui en a après Rago et ses pouvoirs. Suite à un concours de circonstance, les deux protagonistes vont devoir apprendre à se supporter pour combattre ces esprits",
+        "avis": "Le principe est très simple et pourtant tellement bien. Le seul point faible de ce manga est qu'il soit si court.\n> L'univers qu'on nous raconte est très vaste et plein de potentiel, il serait notamment très facile de développer toute une histoire sur le passé d'Azuma Toshimasa lorsqu'il chassait lui-même les Mononoke.\n> Un coup de cœeur dont j'attend l'animé avec impatience.",
+        "img": "https://www.manga-news.com/public/images/pix/serie/24071/black-torch-visual-1.jpg",
+        "statu": "Finished",
+        "watchedOn": "manga"
+    },
+    {
+        "name": "Charlotte",
+        "year": [
+            "2015",
+            "2015"
+        ],
+        "studio": "P.A. Works",
+        "genres": [
+            "Surnaturel",
+            "Comédie",
+            "Drame"
+        ],
+        "watch":[
+        {
+            "name": "Saison unique",
+            "episod": "13 épisodes",
+            "link": "https://v5.voiranime.com/anime/charlotte/"
+        }
+        ],
+        "synopsis": "L'histoire nous entraîne dans un monde où certains enfants, durant la puberté, développent des pouvoirs spéciaux. Yuu Otosaka à la capacité de pouvoir contrôler entièrement le corps d'une personne pendant cinq secondes. Il a utilisé cette compétence durant des années pour atteindre ses objectifs, ce qui lui a permis de pouvoir rentrer dans un lycée prestigieux. Un jour, il est pris la main dans le sac par l'énigmatique, Nao Tomori. Ne pouvant plus reculer, lui et sa sœur sont contraints d'être transférés dans un établissement spécialement équipé pour accueillir ces élèves.",
+        "avis": "C'est un très bon animé à la profondeur insoupsonné. Au début, on suit simplement le quotidien du BDE dans leur quête d'enfant spéciaux avant de découvrir des enjeux bien plus sombre. L'animé est assez calme à suivre au début jusqu'au moment où toutes les questions nous tombent dessus d'un seul coup. Le dévelopement de Yuu est l'un des plus marquant et les actions de Nao sont des plus touchantes.\n> C'est un énorme coup de cœur pour lequel je ne comprend pas pourquoi il n'a pas plus de succès. C'est également un bon animé pour les personnes qui n'en regarde que peu.",
+        "img": "https://i.pinimg.com/originals/3b/50/aa/3b50aa80ad58e5e8ee4aa78771b7583f.jpg",
         "statu": "Finished",
         "watchedOn": "anime"
     }

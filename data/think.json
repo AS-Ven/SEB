@@ -312,10 +312,39 @@
         ],
         "complement": {
             "id": 10,
-            "value": "une pété à la Monique."
+            "value": "une pétée à la Monique."
         },
         "bonus": {
             "gif": "https://media1.tenor.com/m/VKgziZNfjOQAAAAC/c%27est-la-pet%C3%A9e-groland.gif"
+        }
+    },
+    {
+        "subject": {
+            "id": 11,
+            "value" : "Je",
+            "pronoun": "jeM"
+        },
+        "verbe": [
+            {"id": 11},
+            {"pronoun": "jeM", "value": "parle avec"},
+            {"pronoun": "jeF", "value": "parle avec"},
+            {"pronoun": "tuM", "value": "parles avec"},
+            {"pronoun": "tuF", "value": "parles avec"},
+            {"pronoun": "il", "value": "parle avec"},
+            {"pronoun": "elle", "value": "parle avec"},
+            {"pronoun": "nousM", "value": "parlons avec"},
+            {"pronoun": "nousF", "value": "parlons avec"},
+            {"pronoun": "vousM", "value": "parlez avec"},
+            {"pronoun": "vousF", "value": "parlez avec"},
+            {"pronoun": "ils", "value": "parlent avec"},
+            {"pronoun": "elles", "value": "parlent avec"}
+        ],
+        "complement": {
+            "id": 11,
+            "value": "le fou du bus"
+        },
+        "bonus": {
+            "gif": "https://media1.tenor.com/m/W43jI0ignlYAAAAC/im-in-dange-the-simpsons.gif"
         }
     }
 ]

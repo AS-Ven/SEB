@@ -32,29 +32,31 @@ module.exports = {
         else 
         {
             let choose = interaction.options._hoistedOptions[0]
-            // let anime = data[RandomNumber(data.length)]
             let anime = data[data.length - 1]
             let saison = "" 
             let genre = ""
 
             if (choose) {
-                while (!anime.genres.includes(choose.value)) {
-                    anime = data[RandomNumber(data.length)]
-                }
-            }
-            
+                let animelist = []
+                data.forEach(anime_ => {
+                    if (anime_.genres.includes(choose))
+                        animelist.push(anime_)
+                })
+
+            anime = data[RandomNumber(animelist.length)]
+            } else
+            // anime = data[RandomNumber(data.length)]
+
             if (anime.studio) {
                 anime.watch.forEach(s => {
                     saison += `> [${s.name} : ${s.episod}](${s.link})\n`
                 })
             } else {
-                saison = anime.tome
+                saison = `> ${anime.tome}`
             }
 
 
-            anime.genres.forEach(g => {
-                genre += `${g} `
-            })
+            genre = `${anime.genres.join(" - ")}`
             
             interaction.reply({
                 embeds: [
