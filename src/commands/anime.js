@@ -52,7 +52,7 @@ module.exports = {
                     saison += `> [${s.name} : ${s.episod}](${s.link})\n`
                 })
             } else {
-                saison = `> ${anime.tome}`
+                saison = `> ${anime.tome} volumes`
             }
 
 

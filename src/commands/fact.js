@@ -15,7 +15,7 @@ module.exports = {
             embeds: [
                 new EmbedBuilder()
                 .setColor("#ffffff")
-                .setDescription(`## Le saviez-vous ? \n### ${fact}`)
+                .setDescription(`## ${fact.title} !\n ${fact.text}`)
             ]
         })
     }

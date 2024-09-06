@@ -346,5 +346,34 @@
         "bonus": {
             "gif": "https://media1.tenor.com/m/W43jI0ignlYAAAAC/im-in-dange-the-simpsons.gif"
         }
+    },
+    {
+        "subject": {
+            "id": 12,
+            "value" : "Chaque cicatrices",
+            "pronoun": "elles"
+        },
+        "verbe": [
+            {"id": 12},
+            {"pronoun": "jeM", "value": "raconte"},
+            {"pronoun": "jeF", "value": "raconte"},
+            {"pronoun": "tuM", "value": "racontes"},
+            {"pronoun": "tuF", "value": "racontes"},
+            {"pronoun": "il", "value": "raconte"},
+            {"pronoun": "elle", "value": "raconte"},
+            {"pronoun": "nousM", "value": "racontons"},
+            {"pronoun": "nousF", "value": "racontons"},
+            {"pronoun": "vousM", "value": "racontez"},
+            {"pronoun": "vousF", "value": "racontez"},
+            {"pronoun": "ils", "value": "racontent"},
+            {"pronoun": "elles", "value": "racontent"}
+        ],
+        "complement": {
+            "id": 12,
+            "value": "une histoire"
+        },
+        "bonus": {
+            "gif": "https://media1.tenor.com/m/2P5pJAi7vfAAAAAd/apex-legends-season8.gif"
+        }
     }
 ]
