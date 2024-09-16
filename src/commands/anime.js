@@ -31,8 +31,8 @@ module.exports = {
         }
         else 
         {
-            let choose = interaction.options._hoistedOptions[0]
-            let anime = data[data.length - 1]
+            let choose = interaction.options._hoistedOptions[0].value
+            let anime = data[RandomNumber(data.length)]
             let saison = "" 
             let genre = ""
 
@@ -42,11 +42,9 @@ module.exports = {
                     if (anime_.genres.includes(choose))
                         animelist.push(anime_)
                 })
-
-            anime = data[RandomNumber(animelist.length)]
-            } else
-            // anime = data[RandomNumber(data.length)]
-
+            anime = animelist[RandomNumber(animelist.length)]
+            }
+            
             if (anime.studio) {
                 anime.watch.forEach(s => {
                     saison += `> [${s.name} : ${s.episod}](${s.link})\n`

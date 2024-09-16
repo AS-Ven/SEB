@@ -350,8 +350,8 @@
     {
         "subject": {
             "id": 12,
-            "value" : "Chaque cicatrices",
-            "pronoun": "elles"
+            "value" : "Chaque cicatrice",
+            "pronoun": "elle"
         },
         "verbe": [
             {"id": 12},
