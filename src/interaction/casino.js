@@ -1,6 +1,7 @@
 const { EmbedBuilder } = require("discord.js")
 const { InitBlackJack } = require("../commands/casino/blackjack");
 const { InitFastMaths } = require("../commands/casino/fastmaths");
+const { SendError } = require("../controllers");
 
 
 function CasinoPages(bot, interaction) {
@@ -65,9 +66,9 @@ function CasinoPlay(bot, interaction) {
                   InitFastMaths(bot, interaction)
                   break
             default:
-                  break
+                  SendError(interaction, "Veillez sélectioner un jeu.")
       }
-
+                  
 }
 
 module.exports = { CasinoPages, CasinoPlay }

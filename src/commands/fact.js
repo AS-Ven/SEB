@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { ReadData } = require("../controllers/controllerData");
-const { RandomNumber } = require("../controllers/controllerRandom");
+const { ReadData } = require("../controllers");
+const { RandomNumber } = require("../controllers");
 
 module.exports = {
     data: fact = new SlashCommandBuilder()
