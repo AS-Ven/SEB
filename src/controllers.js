@@ -5,6 +5,14 @@ function ReadData(file) {
   return JSON.parse(fs.readFileSync(`${(__dirname, "./")}/data/${file}.json`, "utf8"));
 }
 
+function WriteData(file, data) {
+  fs.writeFileSync(`${path.join(__dirname, "../../")}/data/${file}.json`, JSON.stringify(data), "utf8",
+    function (err) {
+      if (err) throw err;
+    }
+  );
+}
+
 function RandomNumber(max) {
     return Math.floor(Math.random() * max)
 }
@@ -23,4 +31,4 @@ function SendError(interaction, description) {
     })
 }
 
-module.exports = { ReadData, SendError, RandomNumber }
+module.exports = { ReadData, WriteData, SendError, RandomNumber }
