@@ -37,7 +37,7 @@ function CasinoPages(bot, interaction) {
                   break
             case 1:
                   title = "Black Jack"
-                  description = "Petit Black Jack (mais sans argent tkt)"
+                  description = "Petit Black Jack"
                   break;
             case 2:
                   title = "Fast Maths"

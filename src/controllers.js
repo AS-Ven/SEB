@@ -1,4 +1,5 @@
 let fs = require("fs");
+const path = require("path");
 const { EmbedBuilder } = require("discord.js");
 
 function ReadData(file) {
@@ -6,7 +7,7 @@ function ReadData(file) {
 }
 
 function WriteData(file, data) {
-  fs.writeFileSync(`${path.join(__dirname, "../../")}/data/${file}.json`, JSON.stringify(data), "utf8",
+  fs.writeFileSync(`${path.join(__dirname, "../")}/data/${file}.json`, JSON.stringify(data), "utf8",
     function (err) {
       if (err) throw err;
     }

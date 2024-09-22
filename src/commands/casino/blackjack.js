@@ -1,17 +1,31 @@
-const { ReadData } = require("../../controllers")
-const { EmbedBuilder, ActionRowBuilder } = require("discord.js")
+const { BlackJackDatas, BlackJackProfil } = require("../../constructor")
+const { ReadData, WriteData} = require("../../controllers")
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js")
 
 
 function InitBlackJack(bot, interaction) {
     
-    let data = ReadData("card")
+    let data = ReadData("blackjack")
     let deck = []
 
     for (let i = 0; i < 6; i++) {
         for (let i = 0; i < 52; i++) {
-            deck.push(data[i])
+            deck.push(ReadData("card")[i])
         }
     }
+    
+    
+    if (data.players == undefined) {
+        WriteData("blackjack", new BlackJackDatas())
+        data = ReadData("blackjack")
+    }
+
+    if (data.players == 0) {
+        data.players.push(new BlackJackProfil(interaction))
+        WriteData("blackjack", data)
+    }
+    
+    
 
     let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
@@ -39,6 +53,10 @@ function InitBlackJack(bot, interaction) {
 
 function DrawBlackJack(bot, interaction) {
     console.log("Permet de piocher une carte");
+}
+
+function StopBlackJack(bot, interaction) {
+    console.log("Stop la pioche de carte");
 }
 
 function MessageBlackJack(bot, interaction) {
@@ -71,4 +89,4 @@ function RevealCard(bot, interaction) {
     console.log("Révèle les cartes du croupier");
 }
 
-module.exports = { InitBlackJack, DrawBlackJack, MessageBlackJack, RevealCard }
+module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, RevealCard }

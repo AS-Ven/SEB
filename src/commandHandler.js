@@ -42,9 +42,6 @@ function commandHandler(bot, interaction) {
                 case "play":
                     CasinoPlay(bot, interaction)
                     break
-                case "blackjack":
-                    
-                    break
             }
             break
     }

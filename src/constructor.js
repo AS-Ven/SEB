@@ -1,27 +1,35 @@
-class BlackJackProfil{
+class BlackJackDatas{
     constructor() {
-        this.bestScore = {
-            id: "",
-            score: 0
+        this.bestScores = {
+            first : {
+                id: "",
+                score: 0
+            },
+            second : {
+                id: "",
+                score: 0
+            },
+            third : {
+                id: "",
+                score: 0
+            }
         },
-        this.secondScore = {
-            id: "",
-            score: 0
-        },
-        this.thirdScore = {
-            id: "",
-            score: 0
-        }
+        this.players = []
+    }
+}
+
+class BlackJackProfil {
+    constructor(user) {
         this.player = {
-            id: "",
+            id: user.id,
             maxScore: 0,
             score: 0,
-            card: []
-        }
-        this.dealer = {
-            card: []
+            card: [],
+            dealer: [],
+            deck: [],
+            time: ""
         }
     }
 }
 
-module.exports = { BlackJackProfil }
+module.exports = { BlackJackDatas, BlackJackProfil }
