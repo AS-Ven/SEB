@@ -1,3 +1,4 @@
+const { DrawBlackJack, StopBlackJack } = require("./commands/casino/blackjack");
 const { CasinoPages, CasinoPlay } = require("./interaction/casino");
 const { SebCommandes } = require("./interaction/seb");
 
@@ -41,6 +42,12 @@ function commandHandler(bot, interaction) {
                     break
                 case "play":
                     CasinoPlay(bot, interaction)
+                    break
+                case "draw":
+                    DrawBlackJack(bot, interaction)
+                    break
+                case "stop":
+                    StopBlackJack(bot, interaction)
                     break
             }
             break

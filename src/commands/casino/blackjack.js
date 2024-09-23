@@ -24,8 +24,6 @@ function InitBlackJack(bot, interaction) {
         data.players.push(new BlackJackProfil(interaction))
         WriteData("blackjack", data)
     }
-    
-    
 
     let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
