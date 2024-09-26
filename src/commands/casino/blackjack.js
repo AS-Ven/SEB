@@ -1,5 +1,5 @@
 const { BlackJackDatas, BlackJackProfil } = require("../../constructor")
-const { ReadData, WriteData} = require("../../controllers")
+const { ReadData, WriteData, CheckPerms, RandomNumber} = require("../../controllers")
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js")
 
 
@@ -14,7 +14,6 @@ function InitBlackJack(bot, interaction) {
         }
     }
     
-    
     if (data.players == undefined) {
         WriteData("blackjack", new BlackJackDatas())
         data = ReadData("blackjack")
@@ -27,11 +26,11 @@ function InitBlackJack(bot, interaction) {
 
     let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-        .setCustomId(`casino/blackjack/draw`)
+        .setCustomId(`casino/blackjack/draw/${interaction.member.id}`)
         .setLabel(`Carte !`)
         .setStyle("Secondary"),
         new ButtonBuilder()
-        .setCustomId(`casino/blackjack/stop`)
+        .setCustomId(`casino/blackjack/stop/${interaction.member.id}`)
         .setLabel(`Stop`)
         .setStyle("Secondary")
     )
@@ -50,7 +49,8 @@ function InitBlackJack(bot, interaction) {
 }
 
 function DrawBlackJack(bot, interaction) {
-    console.log("Permet de piocher une carte");
+    let data = ReadData("blackjack")
+    let player = data.players.find((_player) => _player.id == interaction.customId.split("/")[3])
 }
 
 function StopBlackJack(bot, interaction) {

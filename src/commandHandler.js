@@ -1,4 +1,5 @@
 const { DrawBlackJack, StopBlackJack } = require("./commands/casino/blackjack");
+const { CheckPerms, SendError } = require("./controllers");
 const { CasinoPages, CasinoPlay } = require("./interaction/casino");
 const { SebCommandes } = require("./interaction/seb");
 
@@ -43,12 +44,19 @@ function commandHandler(bot, interaction) {
                 case "play":
                     CasinoPlay(bot, interaction)
                     break
-                case "draw":
-                    DrawBlackJack(bot, interaction)
-                    break
-                case "stop":
-                    StopBlackJack(bot, interaction)
-                    break
+                case "blackjack" :
+                    if (CheckPerms(interaction, 999)) {
+                        switch (interaction.customId ? interaction.customId.split("/")[2] : commandName) {
+                            case "draw":
+                                DrawBlackJack(bot, interaction)
+                                break
+                                case "stop":
+                                    StopBlackJack(bot, interaction)
+                                    break
+                        }
+                    } else {
+                        SendError(interaction, "Tu ne peux pas intervenir dans la partie des autres")
+                    }
             }
             break
     }

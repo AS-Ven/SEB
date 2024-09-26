@@ -32,4 +32,17 @@ function SendError(interaction, description) {
     })
 }
 
-module.exports = { ReadData, WriteData, SendError, RandomNumber }
+function CheckPerms(interaction, i) {
+  if (i == 999) {
+    let a = interaction.customId.split("/")
+    i = a.length - 1
+  }
+  
+  if (interaction.member.id == interaction.customId.split("/")[i]) {
+    return true
+  } else {
+    return false
+  }
+}
+
+module.exports = { ReadData, WriteData, SendError, RandomNumber, CheckPerms }

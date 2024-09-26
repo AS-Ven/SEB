@@ -19,16 +19,14 @@ class BlackJackDatas{
 }
 
 class BlackJackProfil {
-    constructor(user) {
-        this.player = {
-            id: user.id,
-            maxScore: 0,
-            score: 0,
-            card: [],
-            dealer: [],
-            deck: [],
-            time: ""
-        }
+    constructor(interaction) {
+            this.id = interaction.user.id,
+            this.maxScore = 0,
+            this.score = 0,
+            this.card = [],
+            this.dealer = [],
+            this.deck = [],
+            this.time = ""
     }
 }
 
