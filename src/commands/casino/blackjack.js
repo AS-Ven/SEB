@@ -6,23 +6,43 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js")
 function InitBlackJack(bot, interaction) {
     
     let data = ReadData("blackjack")
-    let deck = []
+
+    if (data.players == undefined) {
+        WriteData("blackjack", new BlackJackDatas())
+        data = ReadData("blackjack")
+    }
+    
+    if (!data.players.find((_player) => _player.id == interaction.member.id)) {
+        data.players.push(new BlackJackProfil(interaction))
+        WriteData("blackjack", data)
+        data = ReadData("blackjack")
+    }
+
+    let player = data.players.find((_player) => _player.id == interaction.member.id)
+
+    if (player.deck.length == 0) {
+    let deck = player.deck
 
     for (let i = 0; i < 6; i++) {
         for (let i = 0; i < 52; i++) {
             deck.push(ReadData("card")[i])
         }
     }
-    
-    if (data.players == undefined) {
-        WriteData("blackjack", new BlackJackDatas())
-        data = ReadData("blackjack")
+
+    for (let i = 0; i < 2; i++) {
+        let card = RandomNumber(player.deck.length)
+        player.card.push(player.deck[card])
+        player.deck.splice(card, 1)
+
+        card = RandomNumber(player.deck.length)
+        player.dealer.push(player.deck[card])
+        player.deck.splice(card, 1)
     }
 
-    if (data.players == 0) {
-        data.players.push(new BlackJackProfil(interaction))
-        WriteData("blackjack", data)
+    WriteData("blackjack", data)
     }
+
+    
 
     let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
@@ -51,6 +71,16 @@ function InitBlackJack(bot, interaction) {
 function DrawBlackJack(bot, interaction) {
     let data = ReadData("blackjack")
     let player = data.players.find((_player) => _player.id == interaction.customId.split("/")[3])
+    let card = RandomNumber(player.deck.length)
+    
+    player.card.push(player.deck[card])
+    player.deck.splice(card, 1)
+
+    card = RandomNumber(player.deck.length)
+    player.dealer.push(player.deck[card])
+    player.deck.splice(card, 1)
+
+    WriteData("blackjack", data)
 }
 
 function StopBlackJack(bot, interaction) {
