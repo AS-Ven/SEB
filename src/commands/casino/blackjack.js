@@ -79,8 +79,10 @@ function DrawBlackJack(bot, interaction) {
     card = RandomNumber(player.deck.length)
     player.dealer.push(player.deck[card])
     player.deck.splice(card, 1)
+    
 
     WriteData("blackjack", data)
+    MessageBlackJack(bot, interaction)
 }
 
 function StopBlackJack(bot, interaction) {
@@ -88,6 +90,10 @@ function StopBlackJack(bot, interaction) {
 }
 
 function MessageBlackJack(bot, interaction) {
+    let data = ReadData("blackjack")
+    let player = data.players.find((_player) => _player.id == interaction.customId.split("/")[3])
+    let croupier = player.dealer
+    let joueur = player.card
 
     let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
@@ -104,8 +110,23 @@ function MessageBlackJack(bot, interaction) {
         embeds: [
             new EmbedBuilder()
             .setColor("#ffffff")
-            .setTitle(`__BLACK JACK__`)
-            .setDescription(`Ouai la description`)
+            .setTitle(`__B L A C K - J A C K__`)
+            .setDescription(`Manche **X**\n Record : **XXX**\n Score : **XX**`)
+            .addFields({
+                name: `Croupier`,
+                value: `${croupier[0].icon} ${croupier[1].icon}`,
+                inline: true
+            })
+            .addFields({
+                name: `a`,
+                value: `a`,
+                inline: true
+            })
+            .addFields({
+                name: `Joueur`,
+                value: `${joueur[0].icon} ${joueur[1].icon}`,
+                inline: true
+            })
         ],
         components: [
             buttons
