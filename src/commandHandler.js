@@ -24,6 +24,9 @@ function commandHandler(bot, interaction) {
         case "think":
             bot.commands.get("think").run(bot, interaction)
             break
+        case "slay":
+            bot.commands.get("slay").run(bot, interaction)
+            break
         case "seb":
             switch(interaction.customId ? interaction.customId.split("/")[1] : commandName) {
                 case "seb":
