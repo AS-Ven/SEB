@@ -42,8 +42,6 @@ function InitBlackJack(bot, interaction) {
     WriteData("blackjack", data)
     }
 
-    
-
     MessageBlackJack(bot, interaction, false)
 }
 
@@ -68,7 +66,85 @@ function StopBlackJack(bot, interaction) {
     console.log("Stop la pioche de carte");
 }
 
+function MathsBlackJack(bot, interaction) {
+    let data = ReadData("blackjack")
+    let player = data.players.find((_player) => _player.id == (interaction.customId.split("/")[3] ? interaction.customId.split("/")[3] : interaction.member.id))
+    let playerValue = 0
+    let dealerValue = 0
+
+    player.card.forEach(carte => {
+        switch (carte.value) {
+            case "king":
+            case "queen":
+            case "jack":
+                playerValue += 10
+                break
+            case "ace":
+                playerValue += 11
+                break
+            default:
+                playerValue += parseInt(carte.value)
+                break
+        }
+    });
+    if (playerValue > 21) {
+        playerValue = 0
+        player.card.forEach(carte => {
+            switch (carte.value) {
+                case "king":
+                case "queen":
+                case "jack":
+                    playerValue += 10
+                    break
+                case "ace":
+                    playerValue += 1
+                    break
+                default:
+                    playerValue += parseInt(carte.value)
+                    break
+            }
+       })
+    }
+
+    player.dealer.forEach(carte => {
+        switch (carte.value) {
+            case "king":
+            case "queen":
+            case "jack":
+                dealerValue += 10
+                break
+            case "ace":
+                dealerValue += 11
+                break
+            default:
+                dealerValue += parseInt(carte.value)
+                break
+        }
+    });
+    if (dealerValue > 21) {
+        dealerValue = 0
+        player.dealer.forEach(carte => {
+            switch (carte.value) {
+                case "king":
+                case "queen":
+                case "jack":
+                    dealerValue += 10
+                    break
+                case "ace":
+                    dealerValue += 1
+                    break
+                default:
+                    dealerValue += parseInt(carte.value)
+                    break
+            }
+       })
+    }
+    
+    return [playerValue, dealerValue]
+}
+
 function MessageBlackJack(bot, interaction, reveal) {
+    MathsBlackJack(bot, interaction)
     let data = ReadData("blackjack")
     let player = data.players.find((_player) => _player.id == interaction.member.id)
     let croupier = player.dealer
@@ -148,7 +224,7 @@ function MessageBlackJack(bot, interaction, reveal) {
             .setTitle(`__B L A C K - J A C K__`)
             .setDescription(`Manche **${player.round}**\n Record : **${player.maxScore}**\n Score : **${player.score}**`)
             .addFields({
-                name: `Croupier`,
+                name: `Croupier ${MathsBlackJack(bot, interaction)[1]}`,
                 value: `${croupierCards.join(" - ")}`,
                 inline: true
             })
@@ -158,7 +234,7 @@ function MessageBlackJack(bot, interaction, reveal) {
                 inline: true
             })
             .addFields({
-                name: `Joueur`,
+                name: `Joueur ${MathsBlackJack(bot, interaction)[0]}`,
                 value: `${joueurCards.join(" - ")}`,
                 inline: true
             })
@@ -169,4 +245,4 @@ function MessageBlackJack(bot, interaction, reveal) {
     })
 }
 
-module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack }
+module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack }
