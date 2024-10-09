@@ -44,28 +44,7 @@ function InitBlackJack(bot, interaction) {
 
     
 
-    let buttons = new ActionRowBuilder().addComponents(
-        new ButtonBuilder()
-        .setCustomId(`casino/blackjack/draw/${interaction.member.id}`)
-        .setLabel(`Carte !`)
-        .setStyle("Secondary"),
-        new ButtonBuilder()
-        .setCustomId(`casino/blackjack/stop/${interaction.member.id}`)
-        .setLabel(`Stop`)
-        .setStyle("Secondary")
-    )
-
-    interaction.update({
-        embeds: [
-            new EmbedBuilder()
-            .setColor("#ffffff")
-            .setTitle(`__BLACK JACK__`)
-            .setDescription(`Ouai la description`)
-        ],
-        components: [
-            buttons
-        ]
-    })
+    MessageBlackJack(bot, interaction)
 }
 
 function DrawBlackJack(bot, interaction) {
@@ -91,17 +70,26 @@ function StopBlackJack(bot, interaction) {
 
 function MessageBlackJack(bot, interaction) {
     let data = ReadData("blackjack")
-    let player = data.players.find((_player) => _player.id == interaction.customId.split("/")[3])
+    let player = data.players.find((_player) => _player.id == interaction.member.id)
     let croupier = player.dealer
+    let croupierCards = ""
     let joueur = player.card
+    let joueurCards = ""
+
+    croupier.forEach(carte => {
+        switch(croupier[i].suit) {
+            case "club":
+            croupierCards.push()
+        }
+    });
 
     let buttons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-        .setCustomId(`casino/page/<`)
+        .setCustomId(`casino/blackjack/draw/${interaction.member.id}`)
         .setLabel(`Carte !`)
         .setStyle("Secondary"),
         new ButtonBuilder()
-        .setCustomId(`casino/play`)
+        .setCustomId(`casino/blackjack/stop/${interaction.member.id}`)
         .setLabel(`Stop`)
         .setStyle("Secondary")
     )
@@ -111,10 +99,10 @@ function MessageBlackJack(bot, interaction) {
             new EmbedBuilder()
             .setColor("#ffffff")
             .setTitle(`__B L A C K - J A C K__`)
-            .setDescription(`Manche **X**\n Record : **XXX**\n Score : **XX**`)
+            .setDescription(`Manche **${player.round}**\n Record : **${player.maxScore}**\n Score : **${player.score}**`)
             .addFields({
                 name: `Croupier`,
-                value: `${croupier[0].icon} ${croupier[1].icon}`,
+                value: `${croupierCards}`,
                 inline: true
             })
             .addFields({
@@ -124,7 +112,7 @@ function MessageBlackJack(bot, interaction) {
             })
             .addFields({
                 name: `Joueur`,
-                value: `${joueur[0].icon} ${joueur[1].icon}`,
+                value: `${joueurCards}`,
                 inline: true
             })
         ],

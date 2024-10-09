@@ -23,6 +23,7 @@ class BlackJackProfil {
             this.id = interaction.user.id,
             this.maxScore = 0,
             this.score = 0,
+            this.round = 0,
             this.card = [],
             this.dealer = [],
             this.deck = [],
