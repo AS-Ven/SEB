@@ -44,7 +44,7 @@ function InitBlackJack(bot, interaction) {
 
     
 
-    MessageBlackJack(bot, interaction)
+    MessageBlackJack(bot, interaction, false)
 }
 
 function DrawBlackJack(bot, interaction) {
@@ -61,25 +61,72 @@ function DrawBlackJack(bot, interaction) {
     
 
     WriteData("blackjack", data)
-    MessageBlackJack(bot, interaction)
+    MessageBlackJack(bot, interaction, true)
 }
 
 function StopBlackJack(bot, interaction) {
     console.log("Stop la pioche de carte");
 }
 
-function MessageBlackJack(bot, interaction) {
+function MessageBlackJack(bot, interaction, reveal) {
     let data = ReadData("blackjack")
     let player = data.players.find((_player) => _player.id == interaction.member.id)
     let croupier = player.dealer
-    let croupierCards = ""
+    let croupierCards = []
     let joueur = player.card
-    let joueurCards = ""
+    let joueurCards = []
 
-    croupier.forEach(carte => {
-        switch(croupier[i].suit) {
+    if (reveal == false) {
+            switch(croupier[0].suit) {
+                case "club":
+                    croupierCards.push(`<:club:1293464060175581215> ${croupier[0].value.charAt(0).toUpperCase()}`)
+                    break
+                case "spade":
+                    croupierCards.push(`<:spade:1293464080740519976> ${croupier[0].value.charAt(0).toUpperCase()}`)
+                    break
+                case "heart":
+                    croupierCards.push(`<:heart:1293464102693376000> ${croupier[0].value.charAt(0).toUpperCase()}`)
+                    break
+                case "diamond":
+                    croupierCards.push(`<:diamond:1293464144632221697> ${croupier[0].value.charAt(0).toUpperCase()}`)
+                    break
+            }
+            for (let i = 1; i < croupier.length; i++) {
+                croupierCards.push(`<:card_back:1285699946019950694>`)
+            }
+    } else {
+        croupier.forEach(carte => {
+            switch(carte.suit) {
+                case "club":
+                    croupierCards.push(`<:club:1293464060175581215> ${carte.value.charAt(0).toUpperCase()}`)
+                    break
+                case "spade":
+                    croupierCards.push(`<:spade:1293464080740519976> ${carte.value.charAt(0).toUpperCase()}`)
+                    break
+                case "heart":
+                    croupierCards.push(`<:heart:1293464102693376000> ${carte.value.charAt(0).toUpperCase()}`)
+                    break
+                case "diamond":
+                    croupierCards.push(`<:diamond:1293464144632221697> ${carte.value.charAt(0).toUpperCase()}`)
+                    break
+            }
+        });
+    }
+
+    joueur.forEach(carte => {
+        switch(carte.suit) {
             case "club":
-            croupierCards.push()
+                joueurCards.push(`<:club:1293464060175581215> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+            case "spade":
+                joueurCards.push(`<:spade:1293464080740519976> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+            case "heart":
+                joueurCards.push(`<:heart:1293464102693376000> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+            case "diamond":
+                joueurCards.push(`<:diamond:1293464144632221697> ${carte.value.charAt(0).toUpperCase()}`)
+                break
         }
     });
 
@@ -102,17 +149,17 @@ function MessageBlackJack(bot, interaction) {
             .setDescription(`Manche **${player.round}**\n Record : **${player.maxScore}**\n Score : **${player.score}**`)
             .addFields({
                 name: `Croupier`,
-                value: `${croupierCards}`,
+                value: `${croupierCards.join(" - ")}`,
                 inline: true
             })
             .addFields({
-                name: `a`,
-                value: `a`,
+                name: `\u200b`,
+                value: `\u200b`,
                 inline: true
             })
             .addFields({
                 name: `Joueur`,
-                value: `${joueurCards}`,
+                value: `${joueurCards.join(" - ")}`,
                 inline: true
             })
         ],
@@ -122,8 +169,4 @@ function MessageBlackJack(bot, interaction) {
     })
 }
 
-function RevealCard(bot, interaction) {
-    console.log("Révèle les cartes du croupier");
-}
-
-module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, RevealCard }
+module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack }
