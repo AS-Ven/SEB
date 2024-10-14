@@ -31,7 +31,7 @@ module.exports = {
         }
         else 
         {
-            let choose = interaction.options._hoistedOptions[0].value
+            let choose = (interaction.options._hoistedOptions[0] ? interaction.options._hoistedOptions[0].value : interaction.options._hoistedOptions[0])
             let anime = data[RandomNumber(data.length)]
             let saison = "" 
             let genre = ""

@@ -19,8 +19,9 @@ function InitBlackJack(bot, interaction) {
     }
 
     let player = data.players.find((_player) => _player.id == interaction.member.id)
-
-    if (player.deck.length == 0) {
+    player.deck = []
+    player.card = []
+    player.dealer = []
     let deck = player.deck
 
     for (let i = 0; i < 6; i++) {
@@ -40,7 +41,6 @@ function InitBlackJack(bot, interaction) {
     }
 
     WriteData("blackjack", data)
-    }
 
     MessageBlackJack(bot, interaction, false)
 }
@@ -59,11 +59,36 @@ function DrawBlackJack(bot, interaction) {
     
 
     WriteData("blackjack", data)
-    MessageBlackJack(bot, interaction, true)
+    MessageBlackJack(bot, interaction, false)
 }
 
 function StopBlackJack(bot, interaction) {
-    console.log("Stop la pioche de carte");
+    let data = ReadData("blackjack")
+    let player = data.players.find((_player) => _player.id == (interaction.customId.split("/")[3] ? interaction.customId.split("/")[3] : interaction.member.id))
+    let score = player.score
+    joueur = MathsBlackJack(bot, interaction)[0]
+    croupier = MathsBlackJack(bot, interaction)[1]
+
+    if (joueur > croupier && joueur < 21 || croupier > 21) {
+        console.log("win");
+        score += (parseInt(joueur) - parseInt(croupier)) * 10 * player.round
+    } else if (joueur < croupier && croupier < 21 || joueur > 21) {
+        console.log("loose");
+    } else if (joueur == croupier && joueur < 21) {
+        console.log("draw");
+    } else if (joueur == 21) {
+        console.log("là c'est chiant");   
+    }
+    
+    if (player.maxScore < score) player.score = score
+    player.round ++
+
+    WriteData("blackjack", data)
+    InitBlackJack(bot, interaction)
+}
+
+function DoubleDown(bot, interaction) {
+    console.log("Doublez la charge !");
 }
 
 function MathsBlackJack(bot, interaction) {
@@ -139,7 +164,6 @@ function MathsBlackJack(bot, interaction) {
             }
        })
     }
-    
     return [playerValue, dealerValue]
 }
 
@@ -192,16 +216,16 @@ function MessageBlackJack(bot, interaction, reveal) {
     joueur.forEach(carte => {
         switch(carte.suit) {
             case "club":
-                joueurCards.push(`<:club:1293464060175581215> ${carte.value.charAt(0).toUpperCase()}`)
+                joueurCards.push(`<:club:1293464060175581215> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
                 break
             case "spade":
-                joueurCards.push(`<:spade:1293464080740519976> ${carte.value.charAt(0).toUpperCase()}`)
+                joueurCards.push(`<:spade:1293464080740519976> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
                 break
             case "heart":
-                joueurCards.push(`<:heart:1293464102693376000> ${carte.value.charAt(0).toUpperCase()}`)
+                joueurCards.push(`<:heart:1293464102693376000> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
                 break
             case "diamond":
-                joueurCards.push(`<:diamond:1293464144632221697> ${carte.value.charAt(0).toUpperCase()}`)
+                joueurCards.push(`<:diamond:1293464144632221697> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
                 break
         }
     });
@@ -224,7 +248,7 @@ function MessageBlackJack(bot, interaction, reveal) {
             .setTitle(`__B L A C K - J A C K__`)
             .setDescription(`Manche **${player.round}**\n Record : **${player.maxScore}**\n Score : **${player.score}**`)
             .addFields({
-                name: `Croupier ${MathsBlackJack(bot, interaction)[1]}`,
+                name: `Croupier`,
                 value: `${croupierCards.join(" - ")}`,
                 inline: true
             })
@@ -245,4 +269,4 @@ function MessageBlackJack(bot, interaction, reveal) {
     })
 }
 
-module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack }
+module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack, DoubleDown }

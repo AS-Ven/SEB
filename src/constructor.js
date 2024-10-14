@@ -21,9 +21,9 @@ class BlackJackDatas{
 class BlackJackProfil {
     constructor(interaction) {
             this.id = interaction.user.id,
-            this.maxScore = 0,
-            this.score = 0,
-            this.round = 0,
+            this.maxScore = 100,
+            this.score = 100,
+            this.round = 1,
             this.card = [],
             this.dealer = [],
             this.deck = [],

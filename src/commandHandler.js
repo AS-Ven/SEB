@@ -53,9 +53,9 @@ function commandHandler(bot, interaction) {
                             case "draw":
                                 DrawBlackJack(bot, interaction)
                                 break
-                                case "stop":
-                                    StopBlackJack(bot, interaction)
-                                    break
+                            case "stop":
+                                StopBlackJack(bot, interaction)
+                                break
                         }
                     } else {
                         SendError(interaction, "Tu ne peux pas intervenir dans la partie des autres")
