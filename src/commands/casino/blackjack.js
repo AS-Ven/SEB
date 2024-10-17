@@ -1,5 +1,5 @@
 const { BlackJackDatas, BlackJackProfil } = require("../../constructor")
-const { ReadData, WriteData, CheckPerms, RandomNumber} = require("../../controllers")
+const { ReadData, WriteData, RandomNumber} = require("../../controllers")
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js")
 
 
@@ -65,26 +65,30 @@ function DrawBlackJack(bot, interaction) {
 function StopBlackJack(bot, interaction) {
     let data = ReadData("blackjack")
     let player = data.players.find((_player) => _player.id == (interaction.customId.split("/")[3] ? interaction.customId.split("/")[3] : interaction.member.id))
-    let score = player.score
     joueur = MathsBlackJack(bot, interaction)[0]
     croupier = MathsBlackJack(bot, interaction)[1]
 
-    if (joueur > croupier && joueur < 21 || croupier > 21) {
-        console.log("win");
-        score += (parseInt(joueur) - parseInt(croupier)) * 10 * player.round
+    if (joueur == 21) {
+        console.log("là c'est chiant");   
     } else if (joueur < croupier && croupier < 21 || joueur > 21) {
         console.log("loose");
-    } else if (joueur == croupier && joueur < 21) {
+    } else if (joueur > croupier && joueur < 21 || croupier > 21) {
+        console.log("win");
+        player.score += (parseInt(joueur) - parseInt(croupier)) * 10 * player.round
+    } else if (joueur == croupier) {
         console.log("draw");
-    } else if (joueur == 21) {
-        console.log("là c'est chiant");   
+    } else {
+        console.log("C'était pas prévu ça...");
+        console.log(joueur, croupier);
+        console.log("C'était pas prévu ça...");
     }
-    
-    if (player.maxScore < score) player.score = score
+
+    if (player.maxScore < player.score)
+        player.maxScore = score
     player.round ++
 
     WriteData("blackjack", data)
-    InitBlackJack(bot, interaction)
+    MessageBlackJack(bot, interaction, true)
 }
 
 function DoubleDown(bot, interaction) {
@@ -258,7 +262,7 @@ function MessageBlackJack(bot, interaction, reveal) {
                 inline: true
             })
             .addFields({
-                name: `Joueur ${MathsBlackJack(bot, interaction)[0]}`,
+                name: `Joueur`,
                 value: `${joueurCards.join(" - ")}`,
                 inline: true
             })
