@@ -4,7 +4,6 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js")
 
 
 function InitBlackJack(bot, interaction) {
-    
     let data = ReadData("blackjack")
 
     if (data.players == undefined) {
@@ -22,6 +21,7 @@ function InitBlackJack(bot, interaction) {
     player.deck = []
     player.card = []
     player.dealer = []
+    player.round ++
     let deck = player.deck
 
     for (let i = 0; i < 6; i++) {
@@ -43,6 +43,91 @@ function InitBlackJack(bot, interaction) {
     WriteData("blackjack", data)
 
     MessageBlackJack(bot, interaction, false)
+}
+
+function EndBlackJack(bot, interaction) {
+    let data = ReadData("blackjack")
+    let player = data.players.find((_player) => _player.id == interaction.member.id)
+    let croupier = player.dealer
+    let croupierCards = []
+    let joueur = player.card
+    let joueurCards = []
+
+    croupier.forEach(carte => {
+        switch(carte.suit) {
+            case "club":
+                croupierCards.push(`<:club:1293464060175581215> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+            case "spade":
+                croupierCards.push(`<:spade:1293464080740519976> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+            case "heart":
+                croupierCards.push(`<:heart:1293464102693376000> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+            case "diamond":
+                croupierCards.push(`<:diamond:1293464144632221697> ${carte.value.charAt(0).toUpperCase()}`)
+                break
+        }
+    });
+
+    joueur.forEach(carte => {
+        switch(carte.suit) {
+            case "club":
+                joueurCards.push(`<:club:1293464060175581215> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
+                break
+            case "spade":
+                joueurCards.push(`<:spade:1293464080740519976> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
+                break
+            case "heart":
+                joueurCards.push(`<:heart:1293464102693376000> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
+                break
+            case "diamond":
+                joueurCards.push(`<:diamond:1293464144632221697> ${(carte.value == "10" ? "10" : carte.value.charAt(0).toUpperCase())}`)
+                break
+        }
+    });
+
+    let buttons = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+        .setCustomId(`casino/blackjack/init/${interaction.member.id}`)
+        .setLabel(`Prochaine manche`)
+        .setStyle("Secondary"),
+        new ButtonBuilder()
+        .setCustomId(`casino/blackjack/delete/${interaction.member.id}`)
+        .setLabel(`Fin de partie`)
+        .setStyle("Secondary")
+    )
+
+    interaction.update({
+        embeds: [
+            new EmbedBuilder()
+            .setColor("#ffffff")
+            .setTitle(`__B L A C K - J A C K__`)
+            .setDescription(`Manche **${player.round}**\n Record : **${player.maxScore}**\n Score : **${player.score}**`)
+            .addFields({
+                name: `Croupier ${MathsBlackJack(bot, interaction)[1]}`,
+                value: `${croupierCards.join(" - ")}`,
+                inline: true
+            })
+            .addFields({
+                name: `\u200b`,
+                value: `\u200b`,
+                inline: true
+            })
+            .addFields({
+                name: `Joueur ${MathsBlackJack(bot, interaction)[0]}`,
+                value: `${joueurCards.join(" - ")}`,
+                inline: true
+            })
+        ],
+        components: [
+            buttons
+        ]
+    })
+}
+
+function DeleteBlackJack(bot, interaction) {
+    console.log("supp les data");
 }
 
 function DrawBlackJack(bot, interaction) {
@@ -70,11 +155,12 @@ function StopBlackJack(bot, interaction) {
 
     if (joueur == 21) {
         console.log("là c'est chiant");   
-    } else if (joueur < croupier && croupier < 21 || joueur > 21) {
+    } else if (joueur < croupier && croupier <= 21 || joueur > 21) {
         console.log("loose");
+        player.score -= Math.abs((parseInt(croupier) - parseInt(joueur)) * 10 * player.round)
     } else if (joueur > croupier && joueur < 21 || croupier > 21) {
         console.log("win");
-        player.score += (parseInt(joueur) - parseInt(croupier)) * 10 * player.round
+        player.score += Math.abs((parseInt(joueur) - parseInt(croupier)) * 10 * player.round)
     } else if (joueur == croupier) {
         console.log("draw");
     } else {
@@ -84,11 +170,10 @@ function StopBlackJack(bot, interaction) {
     }
 
     if (player.maxScore < player.score)
-        player.maxScore = score
-    player.round ++
+        player.maxScore = player.score
 
     WriteData("blackjack", data)
-    MessageBlackJack(bot, interaction, true)
+    EndBlackJack(bot, interaction)
 }
 
 function DoubleDown(bot, interaction) {
@@ -242,6 +327,10 @@ function MessageBlackJack(bot, interaction, reveal) {
         new ButtonBuilder()
         .setCustomId(`casino/blackjack/stop/${interaction.member.id}`)
         .setLabel(`Stop`)
+        .setStyle("Secondary"),
+        new ButtonBuilder()
+        .setCustomId(`casino/blackjack/double/${interaction.member.id}`)
+        .setLabel(`Double`)
         .setStyle("Secondary")
     )
 
@@ -273,4 +362,4 @@ function MessageBlackJack(bot, interaction, reveal) {
     })
 }
 
-module.exports = { InitBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack, DoubleDown }
+module.exports = { InitBlackJack, EndBlackJack, DeleteBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack, DoubleDown }
