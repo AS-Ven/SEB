@@ -5,6 +5,7 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require("discord.js")
 
 function InitBlackJack(bot, interaction) {
     let data = ReadData("blackjack")
+    let deck = ReadData("card")
 
     if (data.players == undefined) {
         WriteData("blackjack", new BlackJackDatas())
@@ -18,26 +19,16 @@ function InitBlackJack(bot, interaction) {
     }
 
     let player = data.players.find((_player) => _player.id == interaction.member.id)
-    player.deck = []
     player.card = []
     player.dealer = []
     player.round ++
-    let deck = player.deck
-
-    for (let i = 0; i < 6; i++) {
-        for (let i = 0; i < 52; i++) {
-            deck.push(ReadData("card")[i])
-        }
-    }
 
     for (let i = 0; i < 2; i++) {
-        let card = RandomNumber(player.deck.length)
-        player.card.push(player.deck[card])
-        player.deck.splice(card, 1)
+        let card = RandomNumber(deck.length)
+        player.card.push(deck[card])
 
-        card = RandomNumber(player.deck.length)
-        player.dealer.push(player.deck[card])
-        player.deck.splice(card, 1)
+        card = RandomNumber(deck.length)
+        player.dealer.push(deck[card])
     }
 
     WriteData("blackjack", data)
@@ -132,16 +123,14 @@ function DeleteBlackJack(bot, interaction) {
 
 function DrawBlackJack(bot, interaction) {
     let data = ReadData("blackjack")
+    let deck = ReadData("card")
     let player = data.players.find((_player) => _player.id == interaction.customId.split("/")[3])
-    let card = RandomNumber(player.deck.length)
+    let card = RandomNumber(deck.length)
     
-    player.card.push(player.deck[card])
-    player.deck.splice(card, 1)
+    player.card.push(deck[card])
 
-    card = RandomNumber(player.deck.length)
-    player.dealer.push(player.deck[card])
-    player.deck.splice(card, 1)
-    
+    card = RandomNumber(deck.length)
+    player.dealer.push(deck[card])
 
     WriteData("blackjack", data)
     MessageBlackJack(bot, interaction, false)
@@ -154,13 +143,13 @@ function StopBlackJack(bot, interaction) {
     croupier = MathsBlackJack(bot, interaction)[1]
 
     if (joueur == 21) {
-        console.log("là c'est chiant");   
+        console.log("là c'est chiant");
     } else if (joueur < croupier && croupier <= 21 || joueur > 21) {
         console.log("loose");
-        player.score -= Math.abs((parseInt(croupier) - parseInt(joueur)) * 10 * player.round)
+        player.score -= Math.abs((parseInt(croupier) - parseInt(joueur)) * 10 * (1 + (player.round % 10)))
     } else if (joueur > croupier && joueur < 21 || croupier > 21) {
         console.log("win");
-        player.score += Math.abs((parseInt(joueur) - parseInt(croupier)) * 10 * player.round)
+        player.score += Math.abs((parseInt(joueur) - parseInt(croupier)) * 10 * (1 + (player.round % 10)))
     } else if (joueur == croupier) {
         console.log("draw");
     } else {
@@ -254,6 +243,10 @@ function MathsBlackJack(bot, interaction) {
        })
     }
     return [playerValue, dealerValue]
+}
+
+function DealerDrawBlackJack(bot, interaction) {
+    console.log("Le croupier réfléchi à ses cartes");
 }
 
 function MessageBlackJack(bot, interaction, reveal) {
@@ -362,4 +355,4 @@ function MessageBlackJack(bot, interaction, reveal) {
     })
 }
 
-module.exports = { InitBlackJack, EndBlackJack, DeleteBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack, DoubleDown }
+module.exports = { InitBlackJack, EndBlackJack, DeleteBlackJack, DealerDrawBlackJack, DrawBlackJack, StopBlackJack, MessageBlackJack, MathsBlackJack, DoubleDown }

@@ -26,7 +26,6 @@ class BlackJackProfil {
             this.round = 0,
             this.card = [],
             this.dealer = [],
-            this.deck = [],
             this.time = ""
     }
 }
