@@ -24,10 +24,10 @@ function InitBlackJack(bot, interaction) {
     player.round ++
 
     for (let i = 0; i < 2; i++) {
-        let card = RandomNumber(deck.length)
+        let card = RandomNumber(deck.length - 2)
         player.card.push(deck[card])
 
-        card = RandomNumber(deck.length)
+        card = RandomNumber(deck.length - 2)
         player.dealer.push(deck[card])
     }
 
@@ -125,11 +125,11 @@ function DrawBlackJack(bot, interaction) {
     let data = ReadData("blackjack")
     let deck = ReadData("card")
     let player = data.players.find((_player) => _player.id == interaction.customId.split("/")[3])
-    let card = RandomNumber(deck.length)
+    let card = RandomNumber(deck.length - 2)
     
     player.card.push(deck[card])
 
-    card = RandomNumber(deck.length)
+    card = RandomNumber(deck.length - 2)
     player.dealer.push(deck[card])
 
     WriteData("blackjack", data)
@@ -137,21 +137,36 @@ function DrawBlackJack(bot, interaction) {
 }
 
 function StopBlackJack(bot, interaction) {
+    DealerDrawBlackJack(bot, interaction)
+
     let data = ReadData("blackjack")
     let player = data.players.find((_player) => _player.id == (interaction.customId.split("/")[3] ? interaction.customId.split("/")[3] : interaction.member.id))
     joueur = MathsBlackJack(bot, interaction)[0]
     croupier = MathsBlackJack(bot, interaction)[1]
+    let roundScore = Math.abs((parseInt(joueur) - parseInt(croupier)) * 10)
 
     if (joueur == 21) {
         console.log("là c'est chiant");
+        if (player.card.length == 2 && player.card.find((carte) => carte.value == "jack") && player.card.find((carte) => carte.value == "10")) {
+            if (player.dealer.length == 2 && player.dealer.find((carte) => carte.value == "jack") && player.dealer.find((carte) => carte.value == "10")) {
+                console.log("DRAW - DOUBLE BLACKJACK");
+            } else {
+                console.log("BLACKJACK !");
+                player.score += roundScore * 2
+            }
+        }
+
     } else if (joueur < croupier && croupier <= 21 || joueur > 21) {
         console.log("loose");
-        player.score -= Math.abs((parseInt(croupier) - parseInt(joueur)) * 10 * (1 + (player.round % 10)))
+        player.score -= roundScore
+
     } else if (joueur > croupier && joueur < 21 || croupier > 21) {
         console.log("win");
-        player.score += Math.abs((parseInt(joueur) - parseInt(croupier)) * 10 * (1 + (player.round % 10)))
+        player.score += roundScore
+
     } else if (joueur == croupier) {
         console.log("draw");
+
     } else {
         console.log("C'était pas prévu ça...");
         console.log(joueur, croupier);
